@@ -9,7 +9,7 @@ import tkinter as tk
 from core_detection import detect_the_iris, extract_the_iris_features, normalize_the_iris
 from load_dataset_util import find_best_match
 
-def live_iris_recognition(dataset_folder="/home/iris-scanner/Desktop/Demo/core/dataset", screen_width=800):
+def live_iris_recognition(dataset_folder="dataset", screen_width=800):
     # Load dataset dynamically
     dataset_files = [f for f in os.listdir(dataset_folder) if f.endswith(".npy")]
     dataset_data = []
