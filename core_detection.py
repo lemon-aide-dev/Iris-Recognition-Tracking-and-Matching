@@ -10,12 +10,8 @@ if eye_cascade.empty():
 
 # Preprocess the eye image
 def preprocess_the_img(image_path):
-    """
-    Input: file path or already loaded BGR image
-    Output: enhanced grayscale image
-    """
     if isinstance(image_path, str):
-        img = cv2.imread(image_path)
+        img = cv2.imread(image_path) #load image path for processing
     else:
         img = image_path
 
@@ -109,7 +105,7 @@ def normalize_the_iris(iris, radial_res=64, angular_res=512):
     return normalize
 
 
-def extract_the_iris_features(iris, size=(80, 100)):
+def extract_the_iris_features(iris, size=(80, 100)): #resize the img
     if iris is None or iris.size == 0:
         return None
 
